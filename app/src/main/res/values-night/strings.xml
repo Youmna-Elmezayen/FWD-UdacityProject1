@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Email_text">Email: </string>
+    <string name="Password_text">Password: </string>
+    <string name="SignUp_Button">Sign Up</string>
+    <string name="SignIn_Button">Sign In</string>
+    <string name="Welcome_Title">Welcome to our shoe app!</string>
+    <string name="Welcome_text2">This app allows you to check out different shoes available and maybe even create your own shoes listing! Go to the shoe list via the following button and enjoy!</string>
+    <string name="Shoe_List_Button">Shoe List</string>
+    <string name="Instructions_text">Instructions</string>
+    <string name="Instructions_Title">Here is how to use our app:</string>
+    <string name="Instructions_text2">The shoe listing page will show the list of shoes and show a button for adding a new shoe, while the detail page will be for adding a shoe entry. All entries will be saved only as long as the app is running. Any shoe entry must have a name, size, company, description, and images.</string>
+    <string name="Logout_text">Logout</string>
+    <string name="Shoe_Name_Text">Name: </string>
+    <string name="Size_Text">Size: </string>
+    <string name="Company_Text">Company: </string>
+    <string name="Description_Text">Description: </string>
+    <string name="Save_Button">Save</string>
+    <string name="Cancel_Button">Cancel</string>
+    <string name="Empty_Text">Empty</string>
+</resources>
