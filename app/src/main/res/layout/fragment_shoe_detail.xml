@@ -5,11 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="shoe"
             type="com.example.udacityproject1.model.Shoe" />
     </data>
-
+    <!-- Used contraint layout because it is easiest to deal with in design editor and keeps consistent look throughout app-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -92,6 +93,7 @@
             android:ems="10"
             android:hint="Name"
             android:inputType="textPersonName"
+            android:text="@={shoe.name}"
             app:layout_constraintBaseline_toBaselineOf="@+id/shoeName_text"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -103,6 +105,7 @@
             android:ems="10"
             android:hint="Company"
             android:inputType="textPersonName"
+            android:text="@={shoe.company}"
             app:layout_constraintBaseline_toBaselineOf="@+id/company_text"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -114,6 +117,7 @@
             android:ems="10"
             android:hint="Description"
             android:inputType="textPersonName"
+            android:text="@={shoe.description}"
             app:layout_constraintBaseline_toBaselineOf="@+id/description_text"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -124,7 +128,8 @@
             android:layout_marginEnd="@dimen/margin_16"
             android:ems="10"
             android:hint="Size"
-            android:inputType="number"
+            android:inputType="numberDecimal"
+            android:text="@={com.example.udacityproject1.Converter.doubleToString(shoe.size)}"
             app:layout_constraintBaseline_toBaselineOf="@+id/size_text"
             app:layout_constraintEnd_toEndOf="parent" />
 

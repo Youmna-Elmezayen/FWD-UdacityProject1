@@ -9,7 +9,7 @@
             name="shoe"
             type="com.example.udacityproject1.model.Shoe" />
     </data>
-
+    <!-- Used contraint layout because it is easiest to deal with in design editor and keeps consistent look throughout app-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

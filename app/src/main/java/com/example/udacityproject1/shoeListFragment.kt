@@ -31,6 +31,7 @@ class shoeListFragment : Fragment() {
             {
                 binding.emptyText.isVisible = false
                 val newShoeBinding: NewShoeLayoutBinding = DataBindingUtil.inflate(inflater, R.layout.new_shoe_layout, container, false)
+                newShoeBinding.shoe = shoe
                 newShoeBinding.nameDisplay.text = shoe.name
                 newShoeBinding.sizeDisplay.text = shoe.size.toString()
                 newShoeBinding.companyDisplay.text = shoe.company

@@ -7,7 +7,7 @@ import com.example.udacityproject1.model.Shoe
 class ShoeViewModel : ViewModel()
 {
     private var _shoesList = MutableLiveData<List<Shoe>>()
-    val shoesList:  MutableLiveData<List<Shoe>> = _shoesList
+    val shoesList:  MutableLiveData<List<Shoe>> get() = _shoesList
 
     init {
         _shoesList.value = listOf()

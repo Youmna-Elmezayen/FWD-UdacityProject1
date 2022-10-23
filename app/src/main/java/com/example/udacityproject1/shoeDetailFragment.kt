@@ -36,13 +36,13 @@ class shoeDetailFragment : Fragment() {
                 viewModel.updateShoeList(binding.shoeNameEditText.text.toString(), binding.shoeSizeEditText.text.toString().toDouble(),
                     binding.shoeCompanyEditText.text.toString(), binding.shoeDescEditText.text.toString())
                 Toast.makeText(context, "Shoe is added to shoe list.", Toast.LENGTH_SHORT).show()
-                findNavController().navigate(R.id.action_shoeDetailFragment_to_shoeListFragment)
+                findNavController().navigateUp()
             }
 
         }
 
         binding.cancelBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_shoeDetailFragment_to_shoeListFragment)
+            findNavController().navigateUp()
         }
 
         return binding.root

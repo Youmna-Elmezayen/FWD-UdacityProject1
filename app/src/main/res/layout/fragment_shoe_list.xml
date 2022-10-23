@@ -3,7 +3,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <!-- Used contraint layout because it is easiest to deal with in design editor and keeps consistent look throughout app-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,7 +17,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
+            <!-- Used linear layout because we want the items to be placed one after another-->
+            <!-- scrollview can only have one child view or viewgroup-->
             <LinearLayout
                 android:id="@+id/parent_shoe_view"
                 android:layout_width="match_parent"
