@@ -25,16 +25,25 @@ class shoeDetailFragment : Fragment() {
 
         viewModel = ViewModelProvider(requireActivity())[ShoeViewModel::class.java]
 
+        with(binding)
+        {
+            shoe = Shoe("", 0.0, "", "")
+        }
+
         binding.saveBtn.setOnClickListener {
-            if(binding.shoeNameEditText.text.toString() == "" || binding.shoeSizeEditText.text.toString() == "" ||
-                    binding.shoeCompanyEditText.text.toString() == "" || binding.shoeDescEditText.text.toString() == "")
+
+            val name = binding.shoe?.name ?:""
+            val size = binding.shoe?.size.toString()
+            val company = binding.shoe?.company ?:""
+            val desc = binding.shoe?.description ?:""
+
+            if(name == "" || size == "" || company == "" || desc == "")
             {
                 Toast.makeText(context, "There is an empty field. Please fill.", Toast.LENGTH_LONG).show()
             }
             else
             {
-                viewModel.updateShoeList(binding.shoeNameEditText.text.toString(), binding.shoeSizeEditText.text.toString().toDouble(),
-                    binding.shoeCompanyEditText.text.toString(), binding.shoeDescEditText.text.toString())
+                viewModel.updateShoeList(name, size.toDouble(), company, desc)
                 Toast.makeText(context, "Shoe is added to shoe list.", Toast.LENGTH_SHORT).show()
                 findNavController().navigateUp()
             }

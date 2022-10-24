@@ -26,16 +26,18 @@ class shoeListFragment : Fragment() {
         }
 
         viewModel = ViewModelProvider(requireActivity())[ShoeViewModel::class.java]
+
+        with(binding)
+        {
+            listViewModel = viewModel
+        }
+
         viewModel.shoesList.observe(viewLifecycleOwner) {shoeList ->
             for (shoe in shoeList)
             {
                 binding.emptyText.isVisible = false
                 val newShoeBinding: NewShoeLayoutBinding = DataBindingUtil.inflate(inflater, R.layout.new_shoe_layout, container, false)
                 newShoeBinding.shoe = shoe
-                newShoeBinding.nameDisplay.text = shoe.name
-                newShoeBinding.sizeDisplay.text = shoe.size.toString()
-                newShoeBinding.companyDisplay.text = shoe.company
-                newShoeBinding.descDisplay.text = shoe.description
 
                 binding.parentShoeView.addView(newShoeBinding.root)
             }
